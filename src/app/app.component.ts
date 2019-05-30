@@ -1,3 +1,4 @@
+import { NotificacionService } from './notificacion.service';
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -7,20 +8,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private toastr: ToastrService){
-    this.showSuccess();
+  constructor(
+    public notificacion: NotificacionService){
   }
-
-  showSuccess() {
-    this.toastr.success('Probando notificación', 'Notificación', {
-      timeOut: 5000
-    });
-    this.toastr.error('Probando mensaje de error', 'Mensaje de error', {
-      timeOut: 5000
-    });
-  }
-
-  generarNotificacion(){
-    this.showSuccess();
-  }
+  
 }

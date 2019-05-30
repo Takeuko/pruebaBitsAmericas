@@ -34,6 +34,8 @@ export class NotificacionService {
   }
 
   mostrar(){
+    this.toastr.clear();
+
     if(this.seleccion == 'porDefecto')
       this.porDefecto();
 

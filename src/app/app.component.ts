@@ -19,4 +19,8 @@ export class AppComponent {
       timeOut: 5000
     });
   }
+
+  generarNotificacion(){
+    this.showSuccess();
+  }
 }
